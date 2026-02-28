@@ -5,6 +5,7 @@ import globals from 'globals';
 import typescriptEslint from 'typescript-eslint';
 
 export default typescriptEslint.config(
+  eslintConfigPrettier,
   { ignores: ['*.d.ts', '**/coverage', '**/dist'] },
   {
     extends: [
@@ -22,8 +23,8 @@ export default typescriptEslint.config(
       },
     },
     rules: {
-      // your rules
+      // Prettier rules
+      'prettier/prettier': ['error', { printWidth: 120, singleQuote: true, trailingComma: 'all', semi: true }],
     },
   },
-  eslintConfigPrettier,
 );
