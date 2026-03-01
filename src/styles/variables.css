@@ -1,35 +1,111 @@
 :root {
-  /* colors */
-  --color-bg: #0f172a;
-  --color-surface: #1e293b;
-  --color-surface-soft: #334155;
+  --ds-color-primary-50: #eef2ff;
+  --ds-color-primary-100: #e0e7ff;
+  --ds-color-primary-200: #c7d2fe;
+  --ds-color-primary-300: #a5b4fc;
+  --ds-color-primary-400: #818cf8;
+  --ds-color-primary-500: #6366f1;
+  --ds-color-primary-600: #4f46e5;
+  --ds-color-primary-700: #4338ca;
+  --ds-color-primary-800: #3730a3;
+  --ds-color-primary-900: #312e81;
 
-  --color-primary: #6366f1;
-  --color-primary-hover: #818cf8;
+  /* NEUTRAL (чуть теплее, чем чисто серый) */
+  --ds-color-neutral-0: #ffffff;
+  --ds-color-neutral-50: #fafafa;
+  --ds-color-neutral-100: #f4f4f5;
+  --ds-color-neutral-200: #e4e4e7;
+  --ds-color-neutral-300: #d4d4d8;
+  --ds-color-neutral-400: #a1a1aa;
+  --ds-color-neutral-500: #71717a;
+  --ds-color-neutral-600: #52525b;
+  --ds-color-neutral-700: #3f3f46;
+  --ds-color-neutral-800: #27272a;
+  --ds-color-neutral-900: #18181b;
 
-  --color-success: #22c55e;
-  --color-danger: #ef4444;
-  --color-warning: #f59e0b;
+  /* ERROR (не кислотный, а “продуктовый”) */
+  --ds-color-error-500: #ef4444;
+  --ds-color-error-600: #dc2626;
+  --ds-color-error-700: #b91c1c;
+  /* ═══════════════════════════════════════════════════════════ */
+  --ds-font-weight-semibold: 600;
+  --ds-font-weight-bold: 700;
 
-  --color-text-main: #f8fafc;
-  --color-text-muted: #94a3b8;
+  /* Line Height */
+  --ds-line-height-tight: 1.25;
+  --ds-line-height-normal: 1.5;
+  --ds-line-height-relaxed: 1.75;
 
-  /* radius */
-  --radius-sm: 6px;
-  --radius-md: 10px;
-  --radius-lg: 16px;
+  /* Letter Spacing */
+  --ds-letter-spacing-tight: -0.025em;
+  --ds-letter-spacing-normal: 0;
+  --ds-letter-spacing-wide: 0.025em;
 
-  /* spacing */
-  --space-1: 4px;
-  --space-2: 8px;
-  --space-3: 12px;
-  --space-4: 16px;
-  --space-5: 24px;
+  /* ═══════════════════════════════════════════════════════════
+     SPACING
+     ═══════════════════════════════════════════════════════════ */
 
-  /* shadow */
-  --shadow-sm: 0 2px 4px rgba(0,0,0,.2);
-  --shadow-md: 0 4px 12px rgba(0,0,0,.25);
+  --ds-spacing-0: 0;
+  --ds-spacing-1: 0.25rem; /* 4px */
+  --ds-spacing-2: 0.5rem; /* 8px */
+  --ds-spacing-3: 0.75rem; /* 12px */
+  --ds-spacing-4: 1rem; /* 16px */
+  --ds-spacing-5: 1.25rem; /* 20px */
+  --ds-spacing-6: 1.5rem; /* 24px */
+  --ds-spacing-8: 2rem; /* 32px */
+  --ds-spacing-10: 2.5rem; /* 40px */
+  --ds-spacing-12: 3rem; /* 48px */
+  --ds-spacing-16: 4rem; /* 64px */
+  --ds-spacing-20: 5rem; /* 80px */
+  --ds-spacing-24: 6rem; /* 96px */
 
-  /* transitions */
-  --transition: 0.2s ease;
+  /* ═══════════════════════════════════════════════════════════
+     BORDER RADIUS
+     ═══════════════════════════════════════════════════════════ */
+
+  --ds-radius-none: 0;
+  --ds-radius-sm: 0.25rem; /* 4px */
+  --ds-radius-md: 0.375rem; /* 6px */
+  --ds-radius-lg: 0.5rem; /* 8px */
+  --ds-radius-xl: 0.75rem; /* 12px */
+  --ds-radius-2xl: 1rem; /* 16px */
+  --ds-radius-3xl: 1.5rem; /* 24px */
+  --ds-radius-full: 9999px;
+
+  /* ═══════════════════════════════════════════════════════════
+     SHADOWS
+     ═══════════════════════════════════════════════════════════ */
+
+  --ds-shadow-xs: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --ds-shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --ds-shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --ds-shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --ds-shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --ds-shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  --ds-shadow-inner: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
+
+  /* Colored shadows */
+  --ds-shadow-primary: 0 4px 14px 0 rgb(99 102 241 / 0.4);
+  --ds-shadow-success: 0 4px 14px 0 rgb(16 185 129 / 0.4);
+  --ds-shadow-error: 0 4px 14px 0 rgb(239 68 68 / 0.4);
+
+  /* ═══════════════════════════════════════════════════════════
+     TRANSITIONS
+     ═══════════════════════════════════════════════════════════ */
+
+  --ds-transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --ds-transition-normal: 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  --ds-transition-slow: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* ═══════════════════════════════════════════════════════════
+     Z-INDEX
+     ═══════════════════════════════════════════════════════════ */
+
+  --ds-z-dropdown: 1000;
+  --ds-z-sticky: 1020;
+  --ds-z-fixed: 1030;
+  --ds-z-modal-backdrop: 1040;
+  --ds-z-modal: 1050;
+  --ds-z-popover: 1060;
+  --ds-z-tooltip: 1070;
 }

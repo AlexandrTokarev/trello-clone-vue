@@ -1,3 +1,4 @@
+import storybook from 'eslint-plugin-storybook';
 import eslint from '@eslint/js';
 import eslintConfigPrettier from '@vue/eslint-config-prettier';
 import eslintPluginVue from 'eslint-plugin-vue';
@@ -23,8 +24,10 @@ export default typescriptEslint.config(
       },
     },
     rules: {
+      'vue/max-attributes-per-line': 'off',
       // Prettier rules
       'prettier/prettier': ['error', { printWidth: 120, singleQuote: true, trailingComma: 'all', semi: true }],
     },
   },
+  storybook.configs['flat/recommended'],
 );
